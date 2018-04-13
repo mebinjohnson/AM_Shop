@@ -1,5 +1,7 @@
 package com.example.am.am_shop;
 
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -47,6 +49,28 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.getTabAt(0).setIcon(tabIcons[0]);
         tabLayout.getTabAt(1).setIcon(tabIcons[1]);
         tabLayout.getTabAt(2).setIcon(tabIcons[2]);
+
+        tabLayout.getTabAt(0).getIcon().setColorFilter(Color.parseColor("#01579b"), PorterDuff.Mode.SRC_IN);
+        tabLayout.getTabAt(1).getIcon().setColorFilter(Color.parseColor("#616161"), PorterDuff.Mode.SRC_IN);
+        tabLayout.getTabAt(2).getIcon().setColorFilter(Color.parseColor("#616161"), PorterDuff.Mode.SRC_IN);
+
+
+        tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                tab.getIcon().setColorFilter(Color.parseColor("#01579b"), PorterDuff.Mode.SRC_IN);
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+                tab.getIcon().setColorFilter(Color.parseColor("#616161"), PorterDuff.Mode.SRC_IN);
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
     }
 
     private void setupViewPager(ViewPager viewPager) {
