@@ -1,7 +1,9 @@
 package com.example.am.am_shop;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,9 +19,14 @@ public class BlogAdapter extends RecyclerView.Adapter<BlogAdapter.BlogView> {
     String[] nameList = {"One", "Two", "Three", "Four", "Five", "Six",
             "Seven", "Eight", "Nine", "Ten"};
 
+    public Context getContext() {
+        return context;
+    }
+
     public BlogAdapter(Context context) {
         this.context = context;
     }
+
 
     @Override
     public BlogView onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -39,17 +46,29 @@ public class BlogAdapter extends RecyclerView.Adapter<BlogAdapter.BlogView> {
         return nameList.length;
     }
 
-    class BlogView extends RecyclerView.ViewHolder {
+    class BlogView extends RecyclerView.ViewHolder implements View.OnClickListener {
         ImageView imageView;
         TextView textView;
+        View view;
 
-        public BlogView(View itemView) {
-            super(itemView);
+        public BlogView(View v) {
+            super(v);
+            view = v;
+            v.setOnClickListener(this);
 
-            imageView = (ImageView
-                    ) itemView.findViewById(R.id.blog_image);
-            textView = (TextView) itemView.findViewById(R.id.blog_title);
+            imageView = itemView.findViewById(R.id.blog_image);
+            textView = itemView.findViewById(R.id.blog_title);
+
+        }
+
+        @Override
+        public void onClick(View view) {
+
+            Log.d("position", Integer.toString(getAdapterPosition()));
+            BlogAdapter.this.getContext().startActivity(new Intent(BlogAdapter.this.getContext(), BlogItemView.class));
 
         }
     }
+
+
 }
