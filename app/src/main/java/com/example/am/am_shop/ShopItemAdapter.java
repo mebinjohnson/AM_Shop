@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.facebook.drawee.view.SimpleDraweeView;
 
@@ -48,7 +49,8 @@ public class ShopItemAdapter extends RecyclerView.Adapter<ShopItemAdapter.ShopIt
         public ShopItemView(View itemView) {
             super(itemView);
 
-            imageView = (ImageView) itemView.findViewById(R.id.item_image);
+            imageView = (ImageView
+                    ) itemView.findViewById(R.id.item_image);
             textView = (TextView) itemView.findViewById(R.id.item_name);
 
         }

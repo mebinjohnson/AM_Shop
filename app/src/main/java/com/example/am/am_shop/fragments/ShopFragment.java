@@ -1,15 +1,19 @@
 package com.example.am.am_shop.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.am.am_shop.R;
+import com.example.am.am_shop.ShopItemActivity;
 import com.example.am.am_shop.ShopItemAdapter;
 import com.example.am.am_shop.SpacesItemDecoration;
 import com.facebook.drawee.view.SimpleDraweeView;
@@ -17,6 +21,7 @@ import com.facebook.drawee.view.SimpleDraweeView;
 public class ShopFragment extends Fragment {
 
     RecyclerView mRecyclerView;
+    CardView mCardItem;
 
     public ShopFragment() {
         // Required empty public constructor
@@ -43,8 +48,10 @@ public class ShopFragment extends Fragment {
         SpacesItemDecoration decoration = new SpacesItemDecoration(16);
         mRecyclerView.addItemDecoration(decoration);
 
+
         return RootView;
     }
+
 
 
 }

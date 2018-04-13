@@ -20,11 +20,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <com.facebook.drawee.view.SimpleDraweeView xmlns:fresco="http://schemas.android.com/apk/res-auto"
+            <ImageView
                 android:id="@+id/image1"
                 android:layout_width="match_parent"
                 android:layout_height="200.0dp"
-                fresco:placeholderImage="@color/greyHighlight" />
+                android:src="@drawable/one"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -33,7 +33,7 @@
                 android:orientation="vertical">
                 <TextView android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Ladies Kurta Maroon"
+                    android:text="Krapal Striped Women's Straight Kurta  (Black)"
                     android:textSize="18dp"
                     android:textColor="@color/black"/>
                 <TextView android:layout_width="wrap_content"
@@ -45,39 +45,39 @@
                     />
                 <TextView android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="FREE Delivery"
+                    android:text="COD Only"
                     android:textSize="12dp"
                     android:layout_marginTop="4dp"/>
             </LinearLayout>
 
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="8dp">
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:layout_marginTop="8dp">-->
 
-                <TextView android:id="@+id/text_ratings"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@color/green_light"
-                    android:paddingTop="2dp"
-                    android:paddingBottom="2dp"
-                    android:paddingLeft="6dp"
-                    android:paddingRight="6dp"
-                    android:text="4.3 *"
-                    android:textSize="12dp"
-                    android:textColor="@color/gen_white"
-                    android:textStyle="bold"/>
+                <!--<TextView android:id="@+id/text_ratings"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@color/green_light"-->
+                    <!--android:paddingTop="2dp"-->
+                    <!--android:paddingBottom="2dp"-->
+                    <!--android:paddingLeft="6dp"-->
+                    <!--android:paddingRight="6dp"-->
+                    <!--android:text="4.3 *"-->
+                    <!--android:textSize="12dp"-->
+                    <!--android:textColor="@color/gen_white"-->
+                    <!--android:textStyle="bold"/>-->
 
-                <TextView android:id="@+id/text_ratings_reviews"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="12dp"
-                    android:text="50 ratings \u0026 15 reviews"
-                    android:textSize="12dp"/>
+                <!--<TextView android:id="@+id/text_ratings_reviews"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="12dp"-->
+                    <!--android:text="50 ratings \u0026 15 reviews"-->
+                    <!--android:textSize="12dp"/>-->
 
-            </LinearLayout>/
+            <!--</LinearLayout>-->
             <View android:layout_width="match_parent"
                 android:layout_height="@dimen/view_width_small"
                 android:background="@color/greyHighlight"
@@ -150,33 +150,13 @@
                 android:layout_marginTop="@dimen/activity_vertical_margin"
                 android:paddingBottom="@dimen/activity_vertical_margin"
                 android:orientation="vertical">
-                <TextView android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Details"
-                    android:textSize="16dp"
-                    android:textColor="@color/gen_black"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:text="\u2022 Regular fit, full sleeve"
+                    android:text="\u2022 Regular fit, full sleeve\n\u2022 Fabric: Cotton\n\u2022 Pattern: \n\nFlaunt sartorial elegance wearing this blue coloured kurta by KRAPAL. Exclusively designed, this kurta with regular fit will enhance your curves and soft 100% Rayon will keep you comfortable. Team it with contrasting churidar and Kolhapuris to complete your look for the day."
                     android:textSize="12dp"
                     android:textColor="@color/gen_black"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="\u2022 Fabric: Cotton"
-                    android:textSize="12dp"
-                    android:textColor="@color/gen_black"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:text="\u2022 Pattern: printed"
-                    android:textSize="12dp"
-                    android:textColor="@color/gen_black"/>
-
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
