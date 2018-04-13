@@ -1,33 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/cardview"
+    android:id="@+id/cardview_blog"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="@dimen/activity_horizontal_margin"
     card_view:cardCornerRadius="2dp">
-    <!--android:layout_marginBottom="4.0dp"-->
-    <!--android:layout_marginLeft="8.0dp"-->
-    <!--android:layout_marginRight="8.0dp"-->
-    <!--android:layout_marginTop="4.0dp"-->
+
     <LinearLayout
-        android:id="@+id/layout_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-
-        <!--<com.facebook.drawee.view.SimpleDraweeView xmlns:fresco="http://schemas.android.com/apk/res-auto"-->
-            <!--android:id="@+id/item_image"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:maxHeight="325dp"-->
-            <!--android:minHeight="180dp"-->
-            <!--fresco:placeholderImage="@color/grey_light" />-->
         <ImageView
-            android:id="@+id/item_image"
+            android:id="@+id/blog_image"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxHeight="250dp"
+            android:maxHeight="200dp"
+            android:minHeight="180dp"
+            android:scaleType="centerCrop"
             android:adjustViewBounds="true"
             android:src="@color/grey_light" />
 
@@ -47,24 +37,17 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/item_name"
-                    android:text="Item Name "
+                    android:id="@+id/blog_title"
+                    android:text="Blog Title"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/item_desc"
-                    android:text="Item descriptions"
+                    android:id="@+id/blog_desc"
+                    android:text="Blog descriptions"
                     android:textSize="10dp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/shop_item_price"
-                    android:text="Rs. 8,999"
-                    android:textColor="#4CAF50"
-                    android:textSize="@dimen/text_size_small" />
             </LinearLayout>
 
             <ImageView
@@ -73,7 +56,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="0.3"
-                android:src="@drawable/ic_favorite_border_black_24dp" />
+                android:src="@drawable/ic_share_black_24dp" />
         </LinearLayout>
     </LinearLayout>
 
