@@ -13,16 +13,19 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme"></activity>
-        <activity android:name=".ShopItemActivity" />
+            android:theme="@style/AppTheme" />
+        <activity android:name=".ShopItemActivity"
+            android:theme="@style/AppBar"/>
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-        <activity android:name=".WelcomeActivity"></activity>
+        <activity android:name=".WelcomeActivity" />
+        <activity android:name=".BlogItemView"
+            android:theme="@style/AppBar"/>
     </application>
 
 </manifest>

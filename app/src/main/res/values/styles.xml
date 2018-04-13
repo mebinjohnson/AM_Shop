@@ -23,9 +23,11 @@
         <item name="android:padding">10dp</item>
     </style>
 
-    <style name="MaterialTheme" parent="android:Theme.Material.Light" >
+    <style name="AppBar" parent="Theme.AppCompat.Light" >
         <item name="android:colorPrimary">@color/colorPrimary</item>
         <item name="android:statusBarColor">@color/colorPrimaryDark</item>
         <item name="android:textColorPrimaryInverse">@color/textColorPrimary</item>
+        <item name="windowNoTitle">false</item>
+        <item name="windowActionBar">true</item>
     </style>
 </resources>

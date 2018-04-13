@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.am.am_shop.BlogItemView;
 import com.example.am.am_shop.R;
 import com.example.am.am_shop.ShopItemActivity;
 import com.mikhaellopez.circularimageview.CircularImageView;
@@ -35,7 +36,7 @@ public class UserFragment extends Fragment {
         img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), ShopItemActivity.class);
+                Intent intent = new Intent(getActivity(), BlogItemView.class);
                 startActivity(intent);
             }
         });
