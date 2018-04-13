@@ -1,6 +1,7 @@
 package com.example.am.am_shop;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -10,11 +11,17 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+
 
 public class SplashActivity extends Activity implements Animation.AnimationListener {
     Animation animFadeIn;
     LinearLayout linearLayout;
 
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +45,7 @@ public class SplashActivity extends Activity implements Animation.AnimationListe
         // set animation listener
         animFadeIn.setAnimationListener(this);
         // animation for image
-        linearLayout = (LinearLayout) findViewById(R.id.layout_linear);
+        linearLayout = findViewById(R.id.layout_linear);
         // start the animation
         linearLayout.setVisibility(View.VISIBLE);
         linearLayout.startAnimation(animFadeIn);
