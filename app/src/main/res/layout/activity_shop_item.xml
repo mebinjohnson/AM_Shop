@@ -195,7 +195,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@color/grey_dark"
-            android:text="BUY NOW"
+            android:text="ORDER NOW"
             android:textSize="14dp"
             android:textColor="@color/colorPrimary"
             android:textStyle="bold"
