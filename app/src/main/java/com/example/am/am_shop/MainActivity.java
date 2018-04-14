@@ -11,6 +11,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 
 import com.example.am.am_shop.fragments.BlogFragment;
 import com.example.am.am_shop.fragments.ShopFragment;
@@ -44,6 +45,11 @@ public class MainActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+
+
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR); //To make the status bar light themed with dark icons
+        getWindow().setStatusBarColor(Color.WHITE); //TODO: Add the status bar color here instead of WHITE
+
 
         viewPager = findViewById(R.id.viewpager);
         setupViewPager(viewPager);
