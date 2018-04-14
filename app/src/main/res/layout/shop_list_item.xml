@@ -6,23 +6,12 @@
     android:layout_height="wrap_content"
     android:layout_marginTop="@dimen/activity_horizontal_margin"
     card_view:cardCornerRadius="2dp">
-    <!--android:layout_marginBottom="4.0dp"-->
-    <!--android:layout_marginLeft="8.0dp"-->
-    <!--android:layout_marginRight="8.0dp"-->
-    <!--android:layout_marginTop="4.0dp"-->
     <LinearLayout
         android:id="@+id/layout_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!--<com.facebook.drawee.view.SimpleDraweeView xmlns:fresco="http://schemas.android.com/apk/res-auto"-->
-            <!--android:id="@+id/item_image"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:maxHeight="325dp"-->
-            <!--android:minHeight="180dp"-->
-            <!--fresco:placeholderImage="@color/grey_light" />-->
         <ImageView
             android:id="@+id/item_image"
             android:layout_width="match_parent"
@@ -56,14 +45,14 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/item_desc"
                     android:text="Item descriptions"
-                    android:textSize="10dp" />
+                    android:textSize="@dimen/text_size_small" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/shop_item_price"
                     android:text="Rs. 8,999"
-                    android:textColor="#4CAF50"
+                    android:textColor="@color/green_light"
                     android:textSize="@dimen/text_size_small" />
             </LinearLayout>
 

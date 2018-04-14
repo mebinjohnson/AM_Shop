@@ -19,7 +19,7 @@
     <style name="BlogTitle" parent="TextAppearance.AppCompat">
     </style>
 
-    <style name="WhiteButton" parent="Theme.AppCompat.Light">
+    <style name="Button_User" parent="Theme.AppCompat.Light">
         <item name="android:background">@color/colorPrimary</item>
         <item name="android:padding">15dp</item>
         <item name="android:drawablePadding">15dp</item>

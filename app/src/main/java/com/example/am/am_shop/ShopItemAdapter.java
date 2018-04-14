@@ -16,7 +16,7 @@ public class ShopItemAdapter extends RecyclerView.Adapter<ShopItemAdapter.ShopIt
     int[] imgList = {R.drawable.two, R.drawable.one, R.drawable.three, R.drawable.four,
             R.drawable.five, R.drawable.six, R.drawable.seven, R.drawable.eight,
             R.drawable.nine, R.drawable.ten};
-    String[] nameList = {"One", "Two", "Three", "Four", "Five", "Six",
+    String[] nameList = {"One", "Krapal Striped Women's Straight Kurta  (Black)", "Three", "Four", "Five", "Six",
             "Seven", "Eight", "Nine", "Ten"};
 
     public Context getContext() {
