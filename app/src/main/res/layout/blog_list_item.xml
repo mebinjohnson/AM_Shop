@@ -46,7 +46,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/blog_desc"
                     android:text="Blog descriptions"
-                    android:textSize="10dp" />
+                    android:textSize="@dimen/text_size_small" />
 
             </LinearLayout>
 
@@ -56,6 +56,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="0.3"
+                android:tint="@color/colorAccent"
                 android:src="@drawable/ic_share_black_24dp" />
         </LinearLayout>
     </LinearLayout>
