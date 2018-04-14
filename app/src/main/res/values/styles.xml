@@ -19,9 +19,12 @@
     <style name="BlogTitle" parent="TextAppearance.AppCompat">
     </style>
 
-    <style name="WhiteButton" parent="Base.Widget.AppCompat.Button">
-        <item name="background">@color/colorPrimary</item>
-        <item name="android:padding">10dp</item>
+    <style name="WhiteButton" parent="Theme.AppCompat.Light">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:padding">15dp</item>
+        <item name="android:drawablePadding">15dp</item>
+        <item name="android:drawableTint">@color/colorAccent</item>
+        <item name="android:textAlignment">textStart</item>
     </style>
 
     <style name="AppBar" parent="Theme.AppCompat.Light" >

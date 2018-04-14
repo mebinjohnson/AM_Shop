@@ -1,15 +1,14 @@
 package com.example.am.am_shop;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import com.facebook.drawee.view.SimpleDraweeView;
 
 public class ShopItemAdapter extends RecyclerView.Adapter<ShopItemAdapter.ShopItemView> {
     private Context context;
@@ -19,6 +18,10 @@ public class ShopItemAdapter extends RecyclerView.Adapter<ShopItemAdapter.ShopIt
             R.drawable.nine, R.drawable.ten};
     String[] nameList = {"One", "Two", "Three", "Four", "Five", "Six",
             "Seven", "Eight", "Nine", "Ten"};
+
+    public Context getContext() {
+        return context;
+    }
 
     public ShopItemAdapter(Context context) {
         this.context = context;
@@ -42,16 +45,25 @@ public class ShopItemAdapter extends RecyclerView.Adapter<ShopItemAdapter.ShopIt
         return nameList.length;
     }
 
-    class ShopItemView extends RecyclerView.ViewHolder {
+    class ShopItemView extends RecyclerView.ViewHolder implements  View.OnClickListener{
         ImageView imageView;
         TextView textView;
+        View view;
 
-        public ShopItemView(View itemView) {
-            super(itemView);
+        private ShopItemView(View v) {
+            super(v);
+            view=v;
+            v.setOnClickListener(this);
 
-            imageView = (ImageView
-                    ) itemView.findViewById(R.id.item_image);
-            textView = (TextView) itemView.findViewById(R.id.item_name);
+            imageView = itemView.findViewById(R.id.item_image);
+            textView = itemView.findViewById(R.id.item_name);
+
+        }
+        @Override
+        public void onClick(View view) {
+
+            Log.d("position", Integer.toString(getAdapterPosition()));
+            ShopItemAdapter.this.getContext().startActivity(new Intent(ShopItemAdapter.this.getContext(), ShopItemActivity.class));
 
         }
     }

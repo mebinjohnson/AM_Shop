@@ -8,7 +8,7 @@ public class App extends android.app.Application {
         super.onCreate();
 
         CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-                .setDefaultFontPath("dense_regular.otf")    //specify
+                .setDefaultFontPath("raleway_regular.ttf")    //specify
                 .setFontAttrId(R.attr.fontPath)
                 .build()
         );
