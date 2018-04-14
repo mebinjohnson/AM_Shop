@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR); //To make the status bar light themed with dark icons
-        getWindow().setStatusBarColor(Color.WHITE); //TODO: Add the status bar color here instead of WHITE
+        getWindow().setStatusBarColor(Color.parseColor("#eeeeee")); //TODO: Add the status bar color here instead of WHITE
 
 
         viewPager = findViewById(R.id.viewpager);

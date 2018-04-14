@@ -7,124 +7,180 @@
     android:orientation="vertical"
     tools:context=".fragments.UserFragment">
 
-    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/cardview"
+    <!--<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:card_view="http://schemas.android.com/apk/res-auto"-->
+    <!--android:id="@+id/cardview"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_gravity="center_horizontal"-->
+    <!--android:layout_marginTop="@dimen/activity_horizontal_margin"-->
+    <!--android:layout_marginBottom="@dimen/activity_horizontal_margin"-->
+    <!--card_view:cardCornerRadius="2dp">-->
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/activity_horizontal_margin"
-        android:layout_marginBottom="@dimen/activity_horizontal_margin"
-        card_view:cardCornerRadius="2dp">
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:orientation="vertical">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/user_image"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/profile_placeholder"
+            app:civ_border_color="@color/colorAccent"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="User Name"
+            android:textAllCaps="true"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_size_large"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:minWidth="250dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="fill"
-            android:layout_margin="10dp"
-            android:padding="15dp"
-            android:orientation="vertical">
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
 
-            <com.mikhaellopez.circularimageview.CircularImageView
-                android:id="@+id/user_image"
-                android:layout_width="125dp"
-                android:layout_height="125dp"
-                android:layout_gravity="center_horizontal"
-                android:src="@drawable/profile_placeholder"
-                app:civ_border_color="#EEEEEE"
-                app:civ_border_width="4dp" />
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginEnd="4dp"
+                android:src="@drawable/ic_smartphone_black_24dp"
+                android:tint="@color/colorAccent" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="User Name"
-                android:textSize="@dimen/text_size_large" />
+                android:text="Mobile:   "
+                android:textStyle="bold" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:orientation="horizontal">
+                android:layout_gravity="fill"
+                android:text="9456855445" />
 
-                <ImageView
-                    android:layout_width="18dp"
-                    android:layout_height="18dp"
-                    android:layout_marginEnd="4dp"
-                    android:tint="@color/colorAccent"
-                    android:src="@drawable/ic_smartphone_black_24dp"/>
+        </LinearLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Mobile:   "
-                    android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="fill"
-                    android:text="9456855445" />
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_marginEnd="4dp"
+                android:src="@drawable/ic_mail_black_24dp"
+                android:tint="@color/colorAccent" />
 
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:orientation="horizontal">
-                <ImageView
-                    android:layout_width="18dp"
-                    android:layout_height="18dp"
-                    android:layout_marginEnd="4dp"
-                    android:tint="@color/colorAccent"
-                    android:src="@drawable/ic_mail_black_24dp"/>
+                android:text="E-mail:   "
+                android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="E-mail:   "
-                    android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="abcdef@gmail.com" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="abcdef@gmail.com" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--</android.support.v7.widget.CardView>-->
 
-            </LinearLayout>
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        card_view:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <Button
+                style="@style/Button_User"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_bookmark_border_black_24dp"
+                android:text="Pinned Blogs"
+                android:textAlignment="center" />
+
+            <Button
+                style="@style/Button_User"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_local_grocery_store_black_24dp"
+                android:text="Shopping Cart"
+                android:textAlignment="center" />
+
+            <Button
+                style="@style/Button_User"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableTop="@drawable/ic_favorite_black_24dp"
+                android:text="Wishlist"
+                android:textAlignment="center" />
         </LinearLayout>
     </android.support.v7.widget.CardView>
 
-
-    <Button
-        style="@style/Button_User"
+    <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardview2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
-        android:drawableLeft="@drawable/ic_bookmark_border_black_24dp"
-        android:text="Pinned Blogs" />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/activity_horizontal_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        card_view:cardCornerRadius="10dp">
 
-    <Button
-        style="@style/Button_User"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
-        android:drawableLeft="@drawable/ic_shopping_basket_black_24dp"
-        android:text="My Orders" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <Button
-        style="@style/Button_User"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
-        android:drawableLeft="@drawable/ic_local_grocery_store_black_24dp"
-        android:text="Shopping Cart" />
 
-    <Button
-        style="@style/Button_User"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:drawableRight="@drawable/ic_chevron_right_black_24dp"
-        android:drawableLeft="@drawable/ic_favorite_black_24dp"
-        android:text="Wishlist" />
+            <Button
+                style="@style/Button_User"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_shopping_basket_black_24dp"
+                android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                android:text="My Orders" />
+
+
+            <Button
+                style="@style/Button_User"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_star_black_24dp"
+                android:drawableRight="@drawable/ic_chevron_right_black_24dp"
+                android:text="Rewards" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
 </LinearLayout>
