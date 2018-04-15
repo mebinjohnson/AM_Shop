@@ -13,9 +13,9 @@ import android.widget.TextView;
 public class BlogAdapter extends RecyclerView.Adapter<BlogAdapter.BlogView> {
     private Context context;
 
-    int[] imgList = {R.drawable.two, R.drawable.one, R.drawable.three, R.drawable.four,
-            R.drawable.five, R.drawable.six, R.drawable.seven, R.drawable.eight,
-            R.drawable.nine, R.drawable.ten};
+    int[] imgList = {R.drawable.b1, R.drawable.b2, R.drawable.b3, R.drawable.b4,
+            R.drawable.b5, R.drawable.b6, R.drawable.b7, R.drawable.b8,
+            R.drawable.b9, R.drawable.b10};
     String[] nameList = {"One", "Two", "Three", "Four", "Five", "Six",
             "Seven", "Eight", "Nine", "Ten"};
 

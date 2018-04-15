@@ -36,6 +36,8 @@
                 <TextView android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Krapal Striped Women's Straight Kurta  (Black)"
+                    tools:ignore="MissingPrefix"
+                    fontPath="raleway_bold.ttf"
                     android:textSize="@dimen/text_size_large"
                     android:textColor="@color/gen_black"/>
                 <TextView android:layout_width="wrap_content"
@@ -93,25 +95,24 @@
                 android:weightSum="2">
 
                 <LinearLayout android:id="@+id/layout_action1"
-                    android:layout_width="0dp"
+                    android:layout_width="fill_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:orientation="horizontal"
-                    android:weightSum="2">
+                    android:orientation="horizontal">
                     <ImageView android:layout_width="18dp"
                         android:layout_height="18dp"
                         android:src="@drawable/ic_share_black_24dp"
                         android:tint="@color/colorAccent"/>
-                    <TextView android:id="@+id/text_action1"
+
+                    <TextView
+                        android:id="@+id/text_action1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
                         android:text="Share"
-                        android:textSize="12dp"
                         android:textColor="@color/gen_black"
-                        android:gravity="left"/>
+                        android:textSize="12dp" />
                 </LinearLayout>
 
                 <View android:layout_width="@dimen/view_width_small"
@@ -119,12 +120,11 @@
                     android:background="@color/grey_light"/>
 
                 <LinearLayout android:id="@+id/layout_action3"
-                    android:layout_width="0dp"
+                    android:layout_width="fill_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:orientation="horizontal"
-                    android:weightSum="2">
+                    android:orientation="horizontal">
                     <ImageView android:layout_width="18dp"
                         android:layout_height="18dp"
                         android:src="@drawable/ic_favorite_black_24dp"
@@ -133,12 +133,10 @@
                     <TextView android:id="@+id/text_action3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:layout_marginLeft="8dp"
+                        android:layout_marginStart="8dp"
                         android:text="Wishlist"
                         android:textSize="12dp"
-                        android:textColor="@color/gen_black"
-                        android:gravity="left"/>
+                        android:textColor="@color/gen_black"/>
                 </LinearLayout>
             </LinearLayout>
             <View android:layout_width="match_parent"
@@ -167,7 +165,9 @@
                     android:layout_marginLeft="25dp"
                     android:text="Regular fit, full sleeve\nFabric: Cotton\nPattern: Stripes\nFlaunt sartorial elegance wearing this blue coloured kurta by KRAPAL. Exclusively designed, this kurta with regular fit will enhance your curves and soft 100% Rayon will keep you comfortable. Team it with contrasting churidar and Kolhapuris to complete your look for the day."
                     android:textSize="@dimen/text_size_xmedium"
-                    android:textColor="@color/gen_black"/>
+                    android:textColor="@color/gen_black"
+                    tools:ignore="MissingPrefix"
+                    fontPath="rale_light.ttf"/>
             </RelativeLayout>
         </LinearLayout>
     </ScrollView>

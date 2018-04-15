@@ -1,136 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_item_details"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     android:orientation="vertical"
-    tools:context="com.example.am.am_shop.ShopItemActivity">
+    tools:context="com.example.am.am_shop.BlogItemView">
 
-    <ScrollView
-        android:id="@+id/scrollbar"
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:scrollbars="none">
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
 
-        <LinearLayout
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/blog_toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+    </android.support.design.widget.AppBarLayout>
 
-            <ImageView
-                android:id="@+id/image1"
-                android:layout_width="match_parent"
-                android:layout_height="200.0dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/ten" />
+    <FrameLayout
+        android:id="@+id/scrollbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/activity_vertical_margin"
-                    android:text="Tilly and the Buttons | Sewing Patterns, Tips &amp; Tutorials for Beginners."
-                    android:textColor="@color/gen_black"
-                    android:textSize="18dp" />
-
-
-                <View
+                <ImageView
+                    android:id="@+id/image1"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/view_width_small"
-                    android:layout_marginTop="8dp"
-                    android:background="@color/grey_light" />
+                    android:layout_height="200.0dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/b3" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="30dp"
-                    android:layout_marginTop="8dp"
-                    android:orientation="horizontal"
-                    android:weightSum="2">
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin">
 
-                    <LinearLayout
-                        android:id="@+id/layout_action1"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="horizontal"
-                        android:weightSum="2">
+                    <TextView
+                        fontPath="raleway_bold.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:text="Tilly and the Buttons | Sewing Patterns, Tips &amp; Tutorials for Beginners."
+                        android:textColor="@color/gen_black"
+                        android:textSize="18dp"
+                        tools:ignore="MissingPrefix" />
 
-                        <ImageView
-                            android:layout_width="18dp"
-                            android:layout_height="18dp"
-                            android:src="@drawable/ic_share_black_24dp"
-                            android:tint="@color/grey_dark" />
-
-                        <TextView
-                            android:id="@+id/text_action1"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="8dp"
-                            android:layout_weight="1"
-                            android:gravity="left"
-                            android:text="Share"
-                            android:textColor="@color/gen_black"
-                            android:textSize="12dp" />
-                    </LinearLayout>
 
                     <View
-                        android:layout_width="@dimen/view_width_small"
-                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_width_small"
+                        android:layout_marginTop="8dp"
                         android:background="@color/grey_light" />
 
                     <LinearLayout
-                        android:id="@+id/layout_action3"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="8dp"
                         android:orientation="horizontal"
                         android:weightSum="2">
 
-                        <ImageView
-                            android:layout_width="18dp"
-                            android:layout_height="18dp"
-                            android:background="@drawable/ic_bookmark_border_black_24dp"
-                            android:src="@drawable/ic_bookmark_border_black_24dp"
-                            android:tint="@color/colorAccent" />
-
-                        <TextView
-                            android:id="@+id/text_action3"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="8dp"
+                        <LinearLayout
+                            android:id="@+id/layout_action1"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:gravity="left"
-                            android:text="Pin this Feed"
-                            android:textColor="@color/gen_black"
-                            android:textSize="12dp" />
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:src="@drawable/ic_share_black_24dp"
+                                android:tint="@color/colorAccent" />
+
+                            <TextView
+                                android:id="@+id/text_action1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:text="Share"
+                                android:textColor="@color/gen_black"
+                                android:textSize="12dp" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="@dimen/view_width_small"
+                            android:layout_height="match_parent"
+                            android:background="@color/grey_light" />
+
+                        <LinearLayout
+                            android:id="@+id/layout_action3"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="18dp"
+                                android:layout_height="18dp"
+                                android:background="@drawable/ic_bookmark_border_black_24dp"
+                                android:src="@drawable/ic_bookmark_border_black_24dp"
+                                android:tint="@color/colorAccent" />
+
+                            <TextView
+                                android:id="@+id/text_action3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="8dp"
+                                android:text="Pin this Feed"
+                                android:textColor="@color/gen_black"
+                                android:textSize="12dp" />
+                        </LinearLayout>
                     </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/view_width_small"
+                        android:layout_marginTop="8dp"
+                        android:background="@color/grey_light" />
+
+
+                    <TextView
+                        fontPath="rale_light.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        android:layout_marginTop="@dimen/activity_vertical_margin"
+                        android:text="@string/long_text"
+                        android:textColor="@color/gen_black"
+                        android:textSize="@dimen/text_size_xmedium"
+                        tools:ignore="MissingPrefix" />
                 </LinearLayout>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/view_width_small"
-                    android:layout_marginTop="8dp"
-                    android:background="@color/grey_light" />
-
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/activity_vertical_margin"
-                    android:layout_marginTop="@dimen/activity_vertical_margin"
-                    android:text="@string/long_text"
-                    android:textColor="@color/gen_black"
-                    android:textSize="12dp" />
             </LinearLayout>
-        </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </FrameLayout>
+</android.support.design.widget.CoordinatorLayout>

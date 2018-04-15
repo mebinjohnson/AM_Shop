@@ -1,4 +1,4 @@
-package com.example.am.am_shop;
+package com.example.am.am_shop.intro;
 
 import android.content.Context;
 import android.content.Intent;
@@ -18,6 +18,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.example.am.am_shop.MainActivity;
+import com.example.am.am_shop.R;
 import com.example.am.am_shop.utilities.PrefManager;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;

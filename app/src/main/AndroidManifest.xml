@@ -15,17 +15,31 @@
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme" />
-        <activity android:name=".ShopItemActivity"
-            android:theme="@style/AppBar"/>
-        <activity android:name=".SplashActivity">
+        <activity
+            android:name=".ShopItemActivity"
+            android:theme="@style/AppBar" />
+        <activity android:name=".intro.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".WelcomeActivity" />
-        <activity android:name=".BlogItemView"
+        <activity android:name=".intro.WelcomeActivity" />
+        <activity
+            android:name=".BlogItemView"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".PinnedBlogs"
+            android:label="Pinned Blogs"
+            android:theme="@style/AppBar"/>
+        <activity android:name=".ShoppingCart"
+            android:label="Shopping Cart"
+            android:theme="@style/AppBar"/>
+        <activity android:name=".WishList"
+            android:label="Wishlist"
+            android:theme="@style/AppBar"/>
+        <activity android:name=".MyOrders"
+            android:label="My Orders"
             android:theme="@style/AppBar"/>
     </application>
 

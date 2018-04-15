@@ -1,4 +1,4 @@
-package com.example.am.am_shop;
+package com.example.am.am_shop.intro;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,6 +10,8 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
+
+import com.example.am.am_shop.R;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 

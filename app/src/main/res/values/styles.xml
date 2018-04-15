@@ -27,6 +27,14 @@
         <item name="android:textAlignment">textStart</item>
     </style>
 
+    <style name="Button_Item" parent="Theme.AppCompat.Light">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:drawableTint">@color/colorAccent</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
     <style name="AppBar" parent="Theme.AppCompat.Light" >
         <item name="android:colorPrimary">@color/colorPrimary</item>
         <item name="android:statusBarColor">@color/colorPrimaryDark</item>
