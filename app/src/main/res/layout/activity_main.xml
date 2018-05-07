@@ -13,7 +13,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@color/colorPrimary"
             app:title="AM Shop"
             app:titleTextColor="@color/textColorPrimary"
             style="@style/AppTheme"
@@ -26,6 +26,10 @@
             android:layout_height="wrap_content"
             app:tabIndicatorColor="@color/colorAccent"
             app:tabMode="fixed"
+            app:tabBackground="?attr/selectableItemBackground"
+            android:clipToPadding="false"
+            android:background="@color/colorPrimary"
+            app:tabIndicatorHeight="2dip"
             app:tabGravity="fill"/>
     </android.support.design.widget.AppBarLayout>
 
