@@ -1,4 +1,4 @@
-package com.example.am.am_shop;
+package com.malkove.app.views;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,6 +16,7 @@ public class ShopItemActivity extends AppCompatActivity {
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +29,7 @@ public class ShopItemActivity extends AppCompatActivity {
 
 
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

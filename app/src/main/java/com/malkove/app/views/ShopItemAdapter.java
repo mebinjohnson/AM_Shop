@@ -1,4 +1,4 @@
-package com.example.am.am_shop;
+package com.malkove.app.views;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,20 +11,19 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ShopItemAdapter extends RecyclerView.Adapter<ShopItemAdapter.ShopItemView> {
-    private Context context;
-
     int[] imgList = {R.drawable.two, R.drawable.one, R.drawable.three, R.drawable.four,
             R.drawable.five, R.drawable.six, R.drawable.seven, R.drawable.eight,
             R.drawable.nine, R.drawable.ten};
     String[] nameList = {"One", "Krapal Striped Women's Straight Kurta  (Black)", "Three", "Four", "Five", "Six",
             "Seven", "Eight", "Nine", "Ten"};
-
-    public Context getContext() {
-        return context;
-    }
+    private Context context;
 
     public ShopItemAdapter(Context context) {
         this.context = context;
+    }
+
+    public Context getContext() {
+        return context;
     }
 
     @Override
@@ -45,20 +44,21 @@ public class ShopItemAdapter extends RecyclerView.Adapter<ShopItemAdapter.ShopIt
         return nameList.length;
     }
 
-    class ShopItemView extends RecyclerView.ViewHolder implements  View.OnClickListener{
+    class ShopItemView extends RecyclerView.ViewHolder implements View.OnClickListener {
         ImageView imageView;
         TextView textView;
         View view;
 
         private ShopItemView(View v) {
             super(v);
-            view=v;
+            view = v;
             v.setOnClickListener(this);
 
             imageView = itemView.findViewById(R.id.item_image);
             textView = itemView.findViewById(R.id.item_name);
 
         }
+
         @Override
         public void onClick(View view) {
 

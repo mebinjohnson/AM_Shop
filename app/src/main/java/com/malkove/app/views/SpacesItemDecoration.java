@@ -1,4 +1,4 @@
-package com.example.am.am_shop;
+package com.malkove.app.views;
 
 import android.graphics.Rect;
 import android.support.v7.widget.RecyclerView;

@@ -1,4 +1,4 @@
-package com.example.am.am_shop.intro;
+package com.malkove.app.views.intro;
 
 import android.app.Activity;
 import android.content.Context;
@@ -11,7 +11,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 
-import com.example.am.am_shop.R;
+import com.malkove.app.views.R;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
@@ -24,6 +24,7 @@ public class SplashActivity extends Activity implements Animation.AnimationListe
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +44,7 @@ public class SplashActivity extends Activity implements Animation.AnimationListe
         }
         // load the animation
         animFadeIn = AnimationUtils.loadAnimation(getApplicationContext(),
-              R.anim.animation_fade_in);
+                R.anim.animation_fade_in);
         // set animation listener
         animFadeIn.setAnimationListener(this);
         // animation for image

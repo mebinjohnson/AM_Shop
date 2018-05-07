@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="10"
-    tools:context="com.example.am.am_shop.ShopItemActivity">
+    tools:context="com.example.am.am_shop.com.malkove.am.am_shop.ShopItemActivity">
     <ScrollView android:id="@+id/scrollbar"
         android:layout_width="match_parent"
         android:layout_height="0dp"

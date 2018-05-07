@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AM Shop</string>
+    <string name="app_name">Malkove</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -11,7 +11,7 @@
     <string name="start">GOT IT</string>
 
     <string name="slide_1_title">Hello User!</string>
-    <string name="slide_1_desc">Welcome to AM_shop. An Intuitive Shopping App with Daily Blog Feeds</string>
+    <string name="slide_1_desc">Welcome to Malkove. An Intuitive Shopping App with Daily Blog Feeds</string>
 
     <string name="slide_2_title">Great Products</string>
     <string name="slide_2_desc">Choose from a variety of products</string>
@@ -20,7 +20,7 @@
     <string name="slide_3_desc">Book from a selection of good quality products at great prices!</string>
 
     <string name="slide_4_title">Get Daily Updates</string>
-    <string name="slide_4_desc">Daly Updates on Intresting Topics!</string>
+    <string name="slide_4_desc">Daily Updates on Interesting Topics!</string>
 
     <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> Our_App -> clear data
     </string>

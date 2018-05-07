@@ -1,4 +1,4 @@
-package com.example.am.am_shop.fragments;
+package com.malkove.app.views.fragments;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,12 +8,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.am.am_shop.MainActivity;
-import com.example.am.am_shop.MyOrders;
-import com.example.am.am_shop.PinnedBlogs;
-import com.example.am.am_shop.R;
-import com.example.am.am_shop.ShoppingCart;
-import com.example.am.am_shop.WishList;
+import com.malkove.app.views.MyOrders;
+import com.malkove.app.views.PinnedBlogs;
+import com.malkove.app.views.R;
+import com.malkove.app.views.ShoppingCart;
+import com.malkove.app.views.WishList;
 
 
 public class UserFragment extends Fragment {

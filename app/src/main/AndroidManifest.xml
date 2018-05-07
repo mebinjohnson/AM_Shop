@@ -1,44 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.am.am_shop">
+    package="com.malkove.app.views">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
-        android:name=".App"
+        android:name="com.malkove.app.views.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="com.malkove.app.views.MainActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".ShopItemActivity"
+            android:name="com.malkove.app.views.ShopItemActivity"
             android:theme="@style/AppBar" />
-        <activity android:name=".intro.SplashActivity">
+        <activity android:name="com.malkove.app.views.intro.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".intro.WelcomeActivity" />
+        <activity android:name="com.malkove.app.views.intro.WelcomeActivity" />
         <activity
-            android:name=".BlogItemView"
+            android:name="com.malkove.app.views.BlogItemView"
             android:theme="@style/AppTheme" />
-        <activity android:name=".PinnedBlogs"
+        <activity
+            android:name="com.malkove.app.views.PinnedBlogs"
             android:label="Pinned Blogs"
             android:theme="@style/AppBar"/>
-        <activity android:name=".ShoppingCart"
+        <activity
+            android:name="com.malkove.app.views.ShoppingCart"
             android:label="Shopping Cart"
             android:theme="@style/AppBar"/>
-        <activity android:name=".WishList"
+        <activity
+            android:name="com.malkove.app.views.WishList"
             android:label="Wishlist"
             android:theme="@style/AppBar"/>
-        <activity android:name=".MyOrders"
+        <activity
+            android:name="com.malkove.app.views.MyOrders"
             android:label="My Orders"
             android:theme="@style/AppBar"/>
     </application>
