@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cardview_blog"
     android:layout_width="match_parent"
@@ -11,14 +12,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
+
         <ImageView
             android:id="@+id/blog_image"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
             android:maxHeight="200dp"
             android:minHeight="180dp"
             android:scaleType="centerCrop"
-            android:adjustViewBounds="true"
             android:src="@color/grey_light" />
 
         <LinearLayout
@@ -35,16 +37,16 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/blog_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/blog_title"
                     android:text="Blog Title"
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/blog_desc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/blog_desc"
                     android:text="Blog descriptions"
                     android:textSize="@dimen/text_size_small" />
 
@@ -57,7 +59,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_weight="0.3"
                 android:tint="@color/colorAccent"
-                android:src="@drawable/ic_share_black_24dp" />
+                app:srcCompat="@drawable/ic_share_black_24dp" />
         </LinearLayout>
     </LinearLayout>
 

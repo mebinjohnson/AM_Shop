@@ -8,10 +8,22 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.malkove.app.models.Blog;
+import com.malkove.app.network.AppDelegate;
+import com.malkove.app.utilities.GsonHelper;
 import com.malkove.app.views.BlogAdapter;
 import com.malkove.app.views.R;
 import com.malkove.app.views.SpacesItemDecoration;
 
+import java.io.IOException;
+import java.util.List;
+
+import lombok.extern.slf4j.Slf4j;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+@Slf4j
 public class BlogFragment extends Fragment {
     RecyclerView mRecyclerView;
 
@@ -34,13 +46,38 @@ public class BlogFragment extends Fragment {
         mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL));
 
 
-        BlogAdapter adapter = new BlogAdapter(getActivity());
-        mRecyclerView.setAdapter(adapter);
+        fetchBlogs();
 
         SpacesItemDecoration decoration = new SpacesItemDecoration(16);
         mRecyclerView.addItemDecoration(decoration);
 
-
         return RootView;
+    }
+
+
+    private void fetchBlogs() {
+        AppDelegate.getInstance().get().getAllPosts().enqueue(new Callback<List<Blog>>() {
+            @Override
+            public void onResponse(Call<List<Blog>> call, Response<List<Blog>> response) {
+                if (response.isSuccessful()) {
+                    log.debug(GsonHelper.getInstance().string(response.body()));
+
+                    BlogAdapter adapter = new BlogAdapter(getActivity(), response.body());
+                    mRecyclerView.setAdapter(adapter);
+                } else {
+                    try {
+                        log.error(response.errorBody().string());
+
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Blog>> call, Throwable t) {
+                t.printStackTrace();
+            }
+        });
     }
 }

@@ -1,5 +1,6 @@
 package com.malkove.app.views;
 
+import io.paperdb.Paper;
 import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 
 public class App extends android.app.Application {
@@ -12,5 +13,6 @@ public class App extends android.app.Application {
                 .setFontAttrId(R.attr.fontPath)
                 .build()
         );
+        Paper.init(this);
     }
 }

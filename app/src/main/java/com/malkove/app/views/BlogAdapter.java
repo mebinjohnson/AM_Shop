@@ -2,68 +2,125 @@ package com.malkove.app.views;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class BlogAdapter extends RecyclerView.Adapter<BlogAdapter.BlogView> {
-    int[] imgList = {R.drawable.b1, R.drawable.b2, R.drawable.b3, R.drawable.b4,
-            R.drawable.b5, R.drawable.b6, R.drawable.b7, R.drawable.b8,
-            R.drawable.b9, R.drawable.b10};
-    String[] nameList = {"One", "Two", "Three", "Four", "Five", "Six",
-            "Seven", "Eight", "Nine", "Ten"};
-    private Context context;
+import com.bumptech.glide.Glide;
+import com.malkove.app.models.Blog;
+import com.malkove.app.models.Media;
+import com.malkove.app.network.AppDelegate;
 
-    public BlogAdapter(Context context) {
+import java.util.List;
+
+import io.paperdb.Paper;
+import lombok.extern.slf4j.Slf4j;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+
+@Slf4j
+public class BlogAdapter extends RecyclerView.Adapter<BlogAdapter.BlogViewHolder> {
+
+    private Context context;
+    private List<Blog> blogList;
+
+    public BlogAdapter(Context context, List<Blog> blogList) {
         this.context = context;
+        this.blogList = blogList;
     }
 
     public Context getContext() {
         return context;
     }
 
+    @NonNull
     @Override
-    public BlogView onCreateViewHolder(ViewGroup parent, int viewType) {
+    public BlogViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View layoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.blog_list_item, parent, false);
-        BlogView blogView = new BlogView(layoutView);
-        return blogView;
+        return new BlogViewHolder(layoutView);
     }
 
+    private boolean setBlogImage(Blog b, ImageView imageView) {
+        if (b.getFeatured_media() == 0) return false;
+        AppDelegate.getInstance().get().getMediaInfo(b.getFeatured_media()).enqueue(new Callback<Media>() {
+            @Override
+            public void onResponse(Call<Media> call, Response<Media> response) {
+                try {
+                    if (response.body() != null)
+                        Glide.with(getContext())
+                                .load(response.body().getSourceUrl())
+                                .into(imageView);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<Media> call, Throwable t) {
+                t.printStackTrace();
+            }
+        });
+
+
+        return true;
+    }
+
+
     @Override
-    public void onBindViewHolder(BlogView holder, int position) {
-        holder.imageView.setImageResource(imgList[position]);
-        holder.textView.setText(nameList[position]);
+    public void onBindViewHolder(BlogViewHolder holder, int position) {
+        Blog blog = blogList.get(position);
+        if (blog == null) {
+            return;// TODO: 12/5/18 handle this
+        }
+        if (!setBlogImage(blog, holder.imageView)) {
+            holder.imageView.setVisibility(View.GONE);
+            // TODO: 12/5/18 replace this with error image
+        }
+        if (blog.getExcerpt() != null)
+            holder.desc.setText(Html.fromHtml(blog.getExcerpt().getRendered()));
+        holder.textView.setText(Html.fromHtml(blog.getTitle().getRendered()));
+
+        holder.itemView.setOnClickListener(v -> {
+//            Log.d("position", Integer.toString(getAdapterPosition()));
+            Paper.book().write("currentBlog", blog);
+            Intent intent = new Intent(BlogAdapter.this.getContext(), BlogItemView.class);
+            intent.putExtra("blog", blog.getId());
+            BlogAdapter.this.getContext().startActivity(intent);
+        });
     }
 
     @Override
     public int getItemCount() {
-        return nameList.length;
+        return blogList.size();
     }
 
-    class BlogView extends RecyclerView.ViewHolder implements View.OnClickListener {
+    class BlogViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         ImageView imageView;
         TextView textView;
+        TextView desc;
         View view;
 
-        public BlogView(View v) {
+        public BlogViewHolder(View v) {
             super(v);
             view = v;
             v.setOnClickListener(this);
 
             imageView = itemView.findViewById(R.id.blog_image);
             textView = itemView.findViewById(R.id.blog_title);
+            desc = itemView.findViewById(R.id.blog_desc);
 
         }
 
         @Override
         public void onClick(View view) {
 
-            Log.d("position", Integer.toString(getAdapterPosition()));
-            BlogAdapter.this.getContext().startActivity(new Intent(BlogAdapter.this.getContext(), BlogItemView.class));
 
         }
     }

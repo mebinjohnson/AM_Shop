@@ -18,9 +18,9 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.malkove.app.utilities.PrefManager;
 import com.malkove.app.views.MainActivity;
 import com.malkove.app.views.R;
-import com.malkove.app.views.utilities.PrefManager;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 

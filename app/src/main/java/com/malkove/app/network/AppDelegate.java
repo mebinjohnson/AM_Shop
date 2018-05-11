@@ -19,7 +19,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 @Slf4j
 public class AppDelegate {
-    private static final String BASE_URL = "http://139.59.67.35/wp-json/wp/v2";
+    private static final String BASE_URL = "http://demo.malkove.com/wp-json/wp/v2/";
     private static AppDelegate _inst = new AppDelegate();
     private APIDelegate serviceApi;
 

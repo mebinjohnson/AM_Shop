@@ -1,4 +1,4 @@
-package com.malkove.app.views.utilities;
+package com.malkove.app.utilities;
 
 import android.content.Context;
 import android.content.SharedPreferences;
