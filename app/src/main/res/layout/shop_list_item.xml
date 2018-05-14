@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cardview"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="@dimen/activity_horizontal_margin"
     card_view:cardCornerRadius="2dp">
+
     <LinearLayout
         android:id="@+id/layout_item"
         android:layout_width="match_parent"
@@ -16,8 +18,8 @@
             android:id="@+id/item_image"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxHeight="250dp"
             android:adjustViewBounds="true"
+            android:maxHeight="250dp"
             android:src="@color/grey_light" />
 
         <LinearLayout
@@ -34,23 +36,23 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/item_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/item_name"
                     android:text="Item Name "
                     android:textStyle="bold" />
 
                 <TextView
+                    android:id="@+id/item_desc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/item_desc"
                     android:text="Item descriptions"
                     android:textSize="@dimen/text_size_small" />
 
                 <TextView
+                    android:id="@+id/shop_item_price"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/shop_item_price"
                     android:text="Rs. 8,999"
                     android:textColor="@color/green_light"
                     android:textSize="@dimen/text_size_small" />
@@ -62,7 +64,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_weight="0.3"
-                android:src="@drawable/ic_favorite_border_black_24dp" />
+                app:srcCompat="@drawable/ic_favorite_border_black_24dp" />
         </LinearLayout>
     </LinearLayout>
 
