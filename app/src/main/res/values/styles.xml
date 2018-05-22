@@ -30,12 +30,23 @@
     <style name="BlogTitle" parent="TextAppearance.AppCompat">
     </style>
 
+    <style name="Button_User_Top" parent="Theme.AppCompat.Light">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:tint">@color/grey_dark</item>
+    </style>
+
     <style name="Button_User" parent="Theme.AppCompat.Light">
         <item name="android:background">@color/colorPrimary</item>
-        <item name="android:padding">15dp</item>
+        <item name="android:paddingLeft">15dp</item>
+        <item name="android:paddingRight">15dp</item>
         <item name="android:drawablePadding">15dp</item>
         <item name="android:drawableTint">@color/colorAccent</item>
         <item name="android:textAlignment">textStart</item>
+    </style>
+
+    <style name="Button_User_thin" parent="Theme.AppCompat.Light">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textAlignment">center</item>
     </style>
 
     <style name="Button_Item" parent="Theme.AppCompat.Light">

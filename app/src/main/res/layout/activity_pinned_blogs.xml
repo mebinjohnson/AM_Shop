@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/grey_light"
     tools:context="com.malkove.app.views.ShoppingCart">
 
-    <include
+    <TextView
         android:layout_height="match_parent"
         android:layout_width="match_parent"
         android:id="@+id/no_item_shopping_cart"
-        layout="@layout/noitem"
+        android:text="No Item to Display"
+        android:gravity="center"
         android:visibility="visible" />
 
     <android.support.v7.widget.RecyclerView
