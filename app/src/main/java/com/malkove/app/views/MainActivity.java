@@ -1,6 +1,7 @@
 package com.malkove.app.views;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
@@ -12,6 +13,8 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 
 import com.malkove.app.views.fragments.BlogFragment;
 import com.malkove.app.views.fragments.ShopFragment;
@@ -29,9 +32,8 @@ public class MainActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private int[] tabIcons = {
             R.drawable.ic_view_day_black_24dp,
-            R.drawable.ic_local_grocery_store_black_24dp,
-            R.drawable.ic_person_black_24dp,
-    };
+            R.drawable.ic_local_grocery_store_black_24dp};
+
 
     @Override
     protected void attachBaseContext(Context newBase) {
@@ -59,14 +61,17 @@ public class MainActivity extends AppCompatActivity {
         setupTabIcons();
     }
 
+    public void start_user_profile(View view) {
+        Intent intent = new Intent(MainActivity.this, UserProfile.class);
+        startActivity(intent);
+    }
+
     private void setupTabIcons() {
         tabLayout.getTabAt(0).setIcon(tabIcons[0]);
         tabLayout.getTabAt(1).setIcon(tabIcons[1]);
-        tabLayout.getTabAt(2).setIcon(tabIcons[2]);
 
         tabLayout.getTabAt(0).getIcon().setColorFilter(Color.parseColor("#01579b"), PorterDuff.Mode.SRC_IN);
         tabLayout.getTabAt(1).getIcon().setColorFilter(Color.parseColor("#616161"), PorterDuff.Mode.SRC_IN);
-        tabLayout.getTabAt(2).getIcon().setColorFilter(Color.parseColor("#616161"), PorterDuff.Mode.SRC_IN);
 
         tabLayout.setOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
@@ -92,7 +97,6 @@ public class MainActivity extends AppCompatActivity {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFrag(new BlogFragment(), "Blog");
         adapter.addFrag(new ShopFragment(), "Shop");
-        adapter.addFrag(new UserFragment(), "User");
         viewPager.setAdapter(adapter);
     }
 
