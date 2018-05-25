@@ -41,6 +41,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Blog Title"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
                     android:textStyle="bold" />
 
                 <TextView
@@ -48,6 +50,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Blog descriptions"
+                    android:visibility="gone"
                     android:textSize="@dimen/text_size_small" />
 
             </LinearLayout>
@@ -59,6 +62,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_weight="0.3"
                 android:tint="@color/colorAccent"
+                android:visibility="gone"
                 app:srcCompat="@drawable/ic_share_black_24dp" />
         </LinearLayout>
     </LinearLayout>

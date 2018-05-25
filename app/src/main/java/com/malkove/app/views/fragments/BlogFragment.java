@@ -43,7 +43,7 @@ public class BlogFragment extends Fragment {
         View RootView = inflater.inflate(R.layout.fragment_blog, container, false);
 
         mRecyclerView = (RecyclerView) RootView.findViewById(R.id.recycler_blog);
-        mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL));
+        mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL));
 
 
         fetchBlogs();
